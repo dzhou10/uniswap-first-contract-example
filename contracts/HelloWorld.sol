@@ -2,6 +2,8 @@
 pragma solidity =0.7.6;
 pragma abicoder v2;
 
+import "hardhat/console.sol";
+
 contract HelloWorld {
     string private message; 
     constructor(string memory _message) {
@@ -9,6 +11,7 @@ contract HelloWorld {
     }
 
     function greet() external view returns (string memory) {
+        console.log("wz debug");
         return string(abi.encodePacked("Hello", " ", message));
     }
 
